@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">
             <img src="TKDH ảnh.png" alt="Personal Logo">
@@ -23,20 +24,32 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
+        <!-- About Section -->
         <section class="about">
             <h2>Đôi nét về tôi</h2>
             <p>Tôi là LOI, một nhà phát triển web với niềm đam mê tạo ra các thiết kế web hiện đại.</p>
             <p>Tôi chuyên về phát triển front-end, thiết kế UI / UX và tạo các trang web đáp ứng, thân thiện với người
                 dùng.</p>
         </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <h2>Kỹ Năng</h2>
+            <div id="skills-container">
+                <!-- Skills will be dynamically added here -->
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Nguyễn Hoàng Lợi. All rights reserved.</p>
         <p>Kết nối với tôi trên <a href="https://github.com/NGUYENHOANGLOI" style="color: #fff;">GitHub</a></p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
         const skills = [
             "HTML: Xây dựng cấu trúc trang web vững chắc.",
@@ -48,7 +61,12 @@
 
         const skillsContainer = document.getElementById('skills-container');
 
-        // Tạo khung cho từng kỹ năng
+        // Add each skill as a list item in the skills container
+        skills.forEach(skill => {
+            const skillItem = document.createElement('p');
+            skillItem.textContent = skill;
+            skillsContainer.appendChild(skillItem);
+        });
     </script>
 </body>
 
