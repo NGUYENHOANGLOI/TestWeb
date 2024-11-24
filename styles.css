@@ -45,6 +45,12 @@ nav a {
     transition: color 0.3s;
 }
 
+.Chuong {
+    font-style: italic; 
+    font-weight: bold;
+}
+
+
 nav a:hover {
     color: #ff9800;
 }
